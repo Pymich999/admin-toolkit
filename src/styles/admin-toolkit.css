@@ -176,11 +176,11 @@ ol {
   align-items: flex-end;
   font-size: clamp(2.8rem, 6.4vw, 5.6rem);
   font-weight: 800;
-  line-height: 1;
+  line-height: 1.08;
   margin-bottom: 1.5rem;
   color: var(--color-blue);
   max-width: 1050px;
-  min-height: 2.05em;
+  min-height: 2.35em;
   letter-spacing: 0;
   text-wrap: balance;
 }
@@ -189,15 +189,6 @@ ol {
   display: inline;
   max-width: 100%;
   overflow-wrap: break-word;
-}
-
-.hero-writing-cursor {
-  flex: 0 0 auto;
-  width: 0.08em;
-  height: 0.9em;
-  margin-left: 0.35rem;
-  background-color: var(--color-blue);
-  animation: cursorBlink 0.9s steps(2, start) infinite;
 }
 
 .hero-tool-icons {
@@ -228,17 +219,6 @@ ol {
   object-fit: contain;
 }
 
-@keyframes cursorBlink {
-  0%,
-  45% {
-    opacity: 1;
-  }
-  46%,
-  100% {
-    opacity: 0;
-  }
-}
-
 .hero-cta-wrapper {
   display: flex;
   justify-content: flex-start;
@@ -251,18 +231,20 @@ ol {
 
   .hero-section {
     min-height: 86vh;
-    padding-block: 2.5rem 3.25rem;
+    align-items: flex-start;
+    padding-block: 1.65rem 3.25rem;
   }
 
   .hero-logo-wrapper {
-    margin-bottom: 2.25rem;
+    margin-bottom: 1.55rem;
   }
 
   .hero-heading {
     align-items: flex-end;
     font-size: clamp(2.05rem, 8.6vw, 3.35rem);
-    line-height: 1.04;
-    min-height: 4.2em;
+    line-height: 1.14;
+    min-height: 5.15em;
+    margin-bottom: 1.2rem;
   }
 
   .hero-tool-icons {
@@ -293,12 +275,6 @@ ol {
 
   .hero-tool-icons {
     gap: 0.42rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-writing-cursor {
-    animation: none;
   }
 }
 

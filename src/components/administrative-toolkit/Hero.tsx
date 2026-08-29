@@ -41,7 +41,7 @@ export default function Hero() {
 
     const atFullPhrase = visibleLength === activePhrase.length;
     const atEmptyPhrase = visibleLength === 0;
-    const delay = atFullPhrase && !isDeleting ? 1300 : isDeleting ? 28 : 48;
+    const delay = atFullPhrase && !isDeleting ? 1600 : isDeleting ? 42 : 72;
 
     const timeout = window.setTimeout(() => {
       if (atFullPhrase && !isDeleting) {
@@ -84,7 +84,6 @@ export default function Hero() {
 
         <h1 className="hero-heading" aria-live="polite">
           <span className="hero-heading-text">{visiblePhrase}</span>
-          <span className="hero-writing-cursor" aria-hidden="true" />
         </h1>
 
         <div className="hero-tool-icons" aria-label="Tools included">
