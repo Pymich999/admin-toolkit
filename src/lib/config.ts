@@ -10,11 +10,11 @@ export const REGISTRATION_DATES = {
 };
 
 export const PROGRAM_DURATION = {
-  weeks: 9,
-  description: "8 weeks of training plus certification",
+  weeks: 8,
+  description: "6 weeks of classes, 1 grace week, and certification in week 8",
 };
 
 export const CONTACT = {
-  phone: ["+234 704 451 0299", "+234 814 636 1623"],
-  email: "CFi.ideation@gmail.com",
+  phone: ["+234 912 355 0770", "+234 916 093 3870"],
+  email: "cfiadministrativetoolkit@gmail.com",
 };

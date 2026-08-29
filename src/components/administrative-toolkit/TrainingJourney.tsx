@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import { EASE_STANDARD } from "@/lib/easing";
 
 const journeyStages = [
@@ -9,7 +8,7 @@ const journeyStages = [
     id: "classes",
     number: "01",
     title: "Classes",
-    subtitle: "Weeks 1-7",
+    subtitle: "Weeks 1-6",
     description:
       "You'll learn core admin tools like Google Forms, Gmail, Drive, Docs, Sheets, Calendar, and Trello in simple, practical steps.",
   },
@@ -17,7 +16,7 @@ const journeyStages = [
     id: "grace",
     number: "02",
     title: "Grace Week",
-    subtitle: "Week 8",
+    subtitle: "Week 7",
     description:
       "If you were not able to complete your classes, this week gives you an extra period to catch up and finish everything.",
   },
@@ -25,32 +24,20 @@ const journeyStages = [
     id: "certification",
     number: "03",
     title: "Certification",
-    subtitle: "Week 9",
+    subtitle: "Week 8",
     description:
       "Congratulations! You've made it this far, and now you're getting your certificate to show for it.",
   },
 ];
 
 export default function TrainingJourney() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start 80%", "end 20%"],
-  });
-  const progressScale = useTransform(scrollYProgress, [0, 1], [0, 1]);
-
   return (
     <section className="journey-section" id="journey">
       <div className="container">
         <h2 className="section-title">Your Training Journey</h2>
 
-        <div className="journey-container" ref={containerRef}>
+        <div className="journey-container">
           <div className="journey-timeline">
-            <motion.div
-              className="journey-line"
-              style={{ scaleY: progressScale }}
-            />
-
             <div className="journey-stages">
               {journeyStages.map((stage, index) => (
                 <motion.div

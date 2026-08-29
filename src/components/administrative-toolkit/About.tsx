@@ -54,8 +54,9 @@ export default function About() {
             viewport={{ once: true, margin: "-10% 0px" }}
             transition={{ duration: 0.5, delay: 0.2, ease: EASE_STANDARD }}
           >
-            Administrative Toolkit is 8 weeks of practical training plus
-            certification, equipping you with the most relevant digital tools to:
+            Administrative Toolkit is 7 weeks of practical training plus
+            certification in week 8, equipping you with the most relevant
+            digital tools to:
           </motion.p>
 
           <motion.ul

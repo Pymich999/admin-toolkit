@@ -165,7 +165,7 @@ ol {
 }
 
 .hero-logo-image {
-  width: clamp(6rem, 11vw, 8.5rem);
+  width: clamp(4.2rem, 7vw, 5.8rem);
   height: auto;
   object-fit: contain;
 }
@@ -174,13 +174,13 @@ ol {
   font-family: var(--font-body);
   display: flex;
   align-items: flex-end;
-  font-size: clamp(2.8rem, 6.4vw, 5.6rem);
+  font-size: clamp(2.8rem, 6vw, 5.25rem);
   font-weight: 800;
   line-height: 1.08;
   margin-bottom: 1.5rem;
   color: var(--color-blue);
   max-width: 1050px;
-  min-height: 2.35em;
+  min-height: auto;
   letter-spacing: 0;
   text-wrap: balance;
 }
@@ -189,6 +189,17 @@ ol {
   display: inline;
   max-width: 100%;
   overflow-wrap: break-word;
+}
+
+.hero-description {
+  font-family: var(--font-body);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 500;
+  line-height: 1.55;
+  max-width: 760px;
+  margin-bottom: 1.5rem;
+  color: rgba(23, 6, 38, 0.72);
+  text-shadow: 0 8px 28px rgba(23, 6, 38, 0.18);
 }
 
 .hero-tool-icons {
@@ -241,10 +252,14 @@ ol {
 
   .hero-heading {
     align-items: flex-end;
-    font-size: clamp(2.05rem, 8.6vw, 3.35rem);
+    font-size: clamp(2rem, 8.2vw, 3.1rem);
     line-height: 1.14;
-    min-height: 5.15em;
+    min-height: auto;
     margin-bottom: 1.2rem;
+  }
+
+  .hero-description {
+    font-size: 1.05rem;
   }
 
   .hero-tool-icons {
@@ -270,7 +285,7 @@ ol {
 
 @media (max-width: 420px) {
   .hero-heading {
-    font-size: clamp(1.95rem, 8.1vw, 2.2rem);
+    font-size: clamp(1.9rem, 7.7vw, 2.1rem);
   }
 
   .hero-tool-icons {
@@ -391,13 +406,13 @@ ol {
 
 @media (max-width: 768px) {
   .about-content {
-    text-align: center;
+    text-align: left;
   }
 }
 
 .about-title {
   font-family: var(--font-body);
-  font-size: clamp(2.5rem, 5.8vw, 4.35rem);
+  font-size: clamp(2.15rem, 4.8vw, 3.55rem);
   font-weight: 800;
   line-height: 1;
   color: var(--color-white);
@@ -432,7 +447,7 @@ ol {
 
 @media (max-width: 768px) {
   .about-benefits {
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
@@ -445,6 +460,11 @@ ol {
   font-weight: 600;
   color: var(--color-white);
   max-width: max-content;
+}
+
+.about-benefit-item:last-child {
+  align-self: center;
+  text-align: center;
 }
 
 .about-benefit-bullet {
@@ -688,41 +708,17 @@ ol {
 
 .journey-timeline {
   position: relative;
-  padding-left: 4.25rem;
+  padding-left: 0;
   padding-top: 0;
   padding-bottom: 0;
 }
 
 .journey-timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 22px;
-  width: 4px;
-  background-color: var(--color-gray-300);
-  border-radius: 2px;
+  display: none;
 }
 
 @media (min-width: 768px) {
   .journey-timeline::before {
-    left: 28px;
-  }
-}
-
-.journey-line {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 22px;
-  width: 4px;
-  background-color: var(--color-blue);
-  border-radius: 2px;
-  transform-origin: top;
-}
-
-@media (min-width: 768px) {
-  .journey-line {
     left: 28px;
   }
 }
@@ -801,10 +797,6 @@ ol {
   }
 
   .journey-timeline::before {
-    display: none;
-  }
-
-  .journey-line {
     display: none;
   }
 

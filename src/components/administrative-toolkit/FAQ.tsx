@@ -8,13 +8,13 @@ const faqs = [
     id: "duration",
     question: "How long is the training?",
     answer:
-      "The training runs for 9 weeks total: 8 weeks of structured classes and a grace week, followed by certification. Classes run weekly, and all sessions are recorded so you can catch up at any time.",
+      "The training runs for 8 weeks total: 6 weeks of structured classes, 1 grace week, and certification in week 8. Classes run weekly, and all sessions are recorded so you can catch up at any time.",
   },
   {
     id: "miss-class",
-      question: "What if I miss a class?",
+    question: "What if I miss a class?",
     answer:
-      "No problem. Week 8 is a dedicated Grace Week where you can catch up on any missed sessions. All classes are also recorded and available for review throughout the program.",
+      "No problem. Week 7 is a dedicated Grace Week where you can catch up on any missed sessions. All classes are also recorded and available for review throughout the program.",
   },
   {
     id: "eligibility",
