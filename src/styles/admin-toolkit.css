@@ -467,14 +467,6 @@ ol {
   max-width: max-content;
 }
 
-.about-benefit-item:last-child {
-  align-self: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  max-width: none;
-}
-
 .about-benefit-bullet {
   width: 8px;
   height: 8px;
