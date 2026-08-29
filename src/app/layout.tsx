@@ -21,7 +21,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Administrative Toolkit Training | CFI Ideation",
   description:
-    "Master a suite of digital tools to enhance your productivity and ensure smooth workflow. Join CFI Ideation's 8-week Administrative Toolkit Training program.",
+    "Master a suite of digital tools to enhance your productivity and ensure smooth workflow. Join CFI Ideation's Administrative Toolkit training program.",
   keywords: [
     "administrative toolkit",
     "training",

@@ -36,7 +36,7 @@ export default function Hero() {
             data-variant="hero"
             whileHover={{
               scale: 1.03,
-              boxShadow: "0 0 30px rgba(13, 83, 178, 0.5)",
+              boxShadow: "0 0 30px rgba(75, 22, 140, 0.5)",
             }}
             whileTap={{ scale: 0.97 }}
           >

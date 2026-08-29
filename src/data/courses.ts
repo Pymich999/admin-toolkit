@@ -75,6 +75,6 @@ export const courses: Course[] = [
     title: "Cline",
     description: "Use AI assistance to plan tasks, edit files, and speed up workflows.",
     image: "/images/courses/cline.png",
-    color: "#111111",
+    color: "#170626",
   },
 ];

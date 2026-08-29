@@ -1,15 +1,17 @@
 :root {
-  --color-blue: #0d53b2;
-  --color-blue-dark: #0a4696;
-  --color-blue-glow: rgba(13, 83, 178, 0.4);
-  --color-white: #ffffff;
-  --color-dark: #111111;
-  --color-soft-bg: #f7f8fa;
-  --color-gray-100: #f8f9fa;
-  --color-gray-200: #e9ecef;
-  --color-gray-300: #dee2e6;
-  --color-gray-600: #6c757d;
-  --color-gray-800: #343a40;
+  --color-blue: #4b168c;
+  --color-blue-dark: #170626;
+  --color-blue-glow: rgba(75, 22, 140, 0.42);
+  --color-white: #f7f2fa;
+  --color-dark: #170626;
+  --color-soft-bg: #f1e8f7;
+  --color-gray-100: #fbf8fd;
+  --color-gray-200: #dbcbe8;
+  --color-gray-300: #b99bd3;
+  --color-gray-600: #765b8d;
+  --color-gray-800: #2d123f;
+  --color-purple-mid: #6b2aa5;
+  --color-lavender: #b99bd3;
 
   --font-display: "Playfair Display", Georgia, serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -66,7 +68,7 @@ a {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid rgba(13, 83, 178, 0.35);
+  outline: 3px solid rgba(75, 22, 140, 0.38);
   outline-offset: 4px;
 }
 
@@ -106,7 +108,7 @@ ol {
 }
 
 .section-title {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: clamp(2.45rem, 5.4vw, 4.25rem);
   font-weight: 800;
   text-align: center;
@@ -169,7 +171,7 @@ ol {
 }
 
 .hero-heading {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   display: flex;
   flex-direction: column;
   font-size: clamp(3rem, 8.4vw, 6.9rem);
@@ -247,12 +249,12 @@ ol {
   background-color: var(--color-blue);
   color: var(--color-white);
   padding: 1.05rem 2.75rem;
-  box-shadow: 0 10px 26px rgba(13, 83, 178, 0.26);
+  box-shadow: 0 10px 26px rgba(75, 22, 140, 0.26);
 }
 
 .btn-primary:hover {
   background-color: var(--color-blue-dark);
-  box-shadow: 0 14px 32px rgba(13, 83, 178, 0.34);
+  box-shadow: 0 14px 32px rgba(75, 22, 140, 0.34);
 }
 
 .registration-section .btn-primary {
@@ -269,7 +271,7 @@ ol {
 
 .registration-section a:focus-visible,
 .footer-section a:focus-visible {
-  outline-color: rgba(255, 255, 255, 0.7);
+  outline-color: rgba(247, 242, 250, 0.72);
 }
 
 .btn-lg {
@@ -285,11 +287,11 @@ ol {
   0%,
   100% {
     transform: scale(1);
-    box-shadow: 0 10px 26px rgba(13, 83, 178, 0.26);
+    box-shadow: 0 10px 26px rgba(75, 22, 140, 0.26);
   }
   50% {
     transform: scale(1.012);
-    box-shadow: 0 0 0 8px rgba(13, 83, 178, 0.08), 0 16px 34px rgba(13, 83, 178, 0.3);
+    box-shadow: 0 0 0 8px rgba(75, 22, 140, 0.1), 0 16px 34px rgba(75, 22, 140, 0.3);
   }
 }
 
@@ -343,7 +345,7 @@ ol {
 }
 
 .about-title {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: clamp(2.5rem, 5.8vw, 4.35rem);
   font-weight: 800;
   line-height: 1;
@@ -423,7 +425,7 @@ ol {
 }
 
 .tools-title {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: clamp(2.5rem, 6.4vw, 4.5rem);
   font-weight: 800;
   line-height: 1.1;
@@ -540,7 +542,7 @@ ol {
   overflow: hidden;
   padding: 2rem;
   background:
-    linear-gradient(135deg, rgba(13, 83, 178, 0.04), rgba(17, 17, 17, 0.02)),
+    linear-gradient(135deg, rgba(75, 22, 140, 0.08), rgba(185, 155, 211, 0.14)),
     var(--color-soft-bg);
   border-bottom: 1px solid var(--color-gray-200);
 }
@@ -717,7 +719,7 @@ ol {
 }
 
 .journey-stage-title {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 1.55rem;
   font-weight: 700;
   color: var(--color-blue);
@@ -792,7 +794,7 @@ ol {
 }
 
 .benefit-card:hover {
-  box-shadow: 0 20px 40px rgba(13, 83, 178, 0.08);
+  box-shadow: 0 20px 40px rgba(75, 22, 140, 0.12);
   border-color: var(--color-blue);
 }
 
@@ -812,7 +814,7 @@ ol {
 }
 
 .benefit-card-title {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: clamp(1.55rem, 3vw, 2rem);
   font-weight: 700;
   color: var(--color-blue);
@@ -852,7 +854,7 @@ ol {
 }
 
 .registration-title {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: clamp(2.55rem, 6.3vw, 4.6rem);
   font-weight: 800;
   line-height: 1.1;
@@ -910,7 +912,7 @@ ol {
 }
 
 .registration-detail-value {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 1.28rem;
   font-weight: 700;
   color: var(--color-white);
@@ -930,7 +932,7 @@ ol {
 }
 
 .faq-title {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: clamp(2.35rem, 5vw, 3.2rem);
   font-weight: 800;
   text-align: center;
@@ -1056,7 +1058,7 @@ ol {
 }
 
 .footer-column-title {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1076,13 +1078,13 @@ ol {
   font-size: 1rem;
   font-weight: 400;
   color: var(--color-white);
-  opacity: 0.7;
+  opacity: 0.76;
   transition: var(--transition-smooth);
 }
 
 .footer-nav-link:hover {
   opacity: 1;
-  color: var(--color-white);
+  color: var(--color-lavender);
 }
 
 .footer-contact-item {
@@ -1119,7 +1121,7 @@ ol {
 .footer-bottom {
   margin-top: 3rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(247, 242, 250, 0.14);
   text-align: center;
 }
 
@@ -1128,6 +1130,6 @@ ol {
   font-size: 0.95rem;
   font-weight: 400;
   color: var(--color-white);
-  opacity: 0.6;
+  opacity: 0.72;
   line-height: 1.5;
 }
