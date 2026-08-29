@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { BRAND_LOGO_URL, CONTACT } from "@/lib/config";
+import { CONTACT, FOOTER_LOGO_URL } from "@/lib/config";
 
 export default function Footer() {
   return (
@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <Image
-              src={BRAND_LOGO_URL}
+              src={FOOTER_LOGO_URL}
               alt="CFI Ideation"
               width={112}
               height={63}

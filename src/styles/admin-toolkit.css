@@ -173,29 +173,70 @@ ol {
 .hero-heading {
   font-family: var(--font-body);
   display: flex;
-  flex-direction: column;
-  font-size: clamp(3rem, 8.4vw, 6.9rem);
+  align-items: flex-end;
+  font-size: clamp(2.8rem, 6.4vw, 5.6rem);
   font-weight: 800;
-  line-height: 0.94;
-  margin-bottom: 1.75rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
   color: var(--color-blue);
+  max-width: 1050px;
+  min-height: 2.05em;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.hero-heading-text {
+  display: inline;
   max-width: 100%;
   overflow-wrap: break-word;
 }
 
-.hero-heading-line {
-  display: block;
+.hero-writing-cursor {
+  flex: 0 0 auto;
+  width: 0.08em;
+  height: 0.9em;
+  margin-left: 0.35rem;
+  background-color: var(--color-blue);
+  animation: cursorBlink 0.9s steps(2, start) infinite;
 }
 
-.hero-description {
-  font-family: var(--font-body);
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
-  font-weight: 500;
-  line-height: 1.55;
-  max-width: 760px;
-  margin-bottom: 2.75rem;
-  color: var(--color-gray-800);
-  max-width: 100%;
+.hero-tool-icons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  max-width: 620px;
+  margin-bottom: 2.6rem;
+}
+
+.hero-tool-icon {
+  --tool-color: var(--color-blue);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.45rem;
+  height: 2.45rem;
+  border-radius: 50%;
+  background-color: var(--color-gray-100);
+  border: 1px solid color-mix(in srgb, var(--tool-color) 34%, transparent);
+  box-shadow: 0 8px 18px rgba(23, 6, 38, 0.08);
+}
+
+.hero-tool-icon-image {
+  width: 1.45rem;
+  height: 1.45rem;
+  object-fit: contain;
+}
+
+@keyframes cursorBlink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .hero-cta-wrapper {
@@ -218,12 +259,26 @@ ol {
   }
 
   .hero-heading {
-    font-size: clamp(2.35rem, 9.5vw, 3.45rem);
-    line-height: 0.98;
+    align-items: flex-end;
+    font-size: clamp(2.05rem, 8.6vw, 3.35rem);
+    line-height: 1.04;
+    min-height: 4.2em;
   }
 
-  .hero-description {
-    font-size: 1.1rem;
+  .hero-tool-icons {
+    justify-content: center;
+    max-width: 100%;
+    margin-bottom: 2.25rem;
+  }
+
+  .hero-tool-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .hero-tool-icon-image {
+    width: 1.28rem;
+    height: 1.28rem;
   }
 
   .hero-cta-wrapper {
@@ -233,7 +288,17 @@ ol {
 
 @media (max-width: 420px) {
   .hero-heading {
-    font-size: clamp(2.2rem, 9.25vw, 2.45rem);
+    font-size: clamp(1.95rem, 8.1vw, 2.2rem);
+  }
+
+  .hero-tool-icons {
+    gap: 0.42rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-writing-cursor {
+    animation: none;
   }
 }
 

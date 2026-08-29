@@ -2,6 +2,7 @@ export const REGISTRATION_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSc4F67D4cjYydBv4pCzwoRuNcqeo9ID9ZBC03eSC-jEfPUsUQ/viewform?usp=header";
 
 export const BRAND_LOGO_URL = "/images/courses/CFi%20Logo%20Black.png";
+export const FOOTER_LOGO_URL = "/images/courses/CFi%20Logo%20White%20(1).png";
 
 export const REGISTRATION_DATES = {
   closes: "5 October 2026",
