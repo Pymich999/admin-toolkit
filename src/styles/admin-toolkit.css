@@ -204,6 +204,10 @@ ol {
 }
 
 @media (max-width: 768px) {
+  .hero-container {
+    padding-inline: 1rem;
+  }
+
   .hero-section {
     min-height: 86vh;
     padding-block: 2.5rem 3.25rem;
@@ -214,7 +218,7 @@ ol {
   }
 
   .hero-heading {
-    font-size: clamp(2.7rem, 11vw, 3.45rem);
+    font-size: clamp(2.35rem, 9.5vw, 3.45rem);
     line-height: 0.98;
   }
 
@@ -224,6 +228,12 @@ ol {
 
   .hero-cta-wrapper {
     justify-content: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-heading {
+    font-size: clamp(2.2rem, 9.25vw, 2.45rem);
   }
 }
 
