@@ -437,6 +437,11 @@ ol {
   margin-bottom: 2rem;
 }
 
+.about-description--full {
+  font-weight: 800;
+  text-align: center;
+}
+
 .about-benefits {
   display: flex;
   flex-direction: column;
@@ -464,7 +469,10 @@ ol {
 
 .about-benefit-item:last-child {
   align-self: center;
+  justify-content: center;
   text-align: center;
+  width: 100%;
+  max-width: none;
 }
 
 .about-benefit-bullet {
