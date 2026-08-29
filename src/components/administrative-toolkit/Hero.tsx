@@ -1,17 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { REGISTRATION_URL } from "@/lib/config";
+import Image from "next/image";
+import { BRAND_LOGO_URL, REGISTRATION_URL } from "@/lib/config";
 
 export default function Hero() {
   return (
     <section className="hero-section">
       <div className="hero-container">
         <div className="hero-logo-wrapper">
-          <div className="hero-logo">
-            <span className="hero-logo-text">CFI</span>
-          </div>
-          <span className="hero-tagline">IDEATION</span>
+          <Image
+            src={BRAND_LOGO_URL}
+            alt="CFI Ideation"
+            width={150}
+            height={84}
+            className="hero-logo-image"
+            priority
+          />
         </div>
 
         <h1 className="hero-heading">

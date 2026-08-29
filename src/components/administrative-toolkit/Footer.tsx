@@ -1,39 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { CONTACT, SOCIAL_LINKS } from "@/lib/config";
-
-function SocialLogo({ name }: { name: string }) {
-  const normalizedName = name.toLowerCase();
-
-  if (normalizedName === "linkedin") {
-    return (
-      <span className="footer-social-logo-text" aria-hidden="true">
-        in
-      </span>
-    );
-  }
-
-  if (normalizedName === "instagram") {
-    return (
-      <svg
-        className="footer-social-logo-svg"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-        <rect x="5" y="5" width="14" height="14" rx="4" />
-        <circle cx="12" cy="12" r="3.2" />
-        <circle cx="16.5" cy="7.5" r="1" />
-      </svg>
-    );
-  }
-
-  return (
-    <span className="footer-social-logo-text" aria-hidden="true">
-      X
-    </span>
-  );
-}
+import { CONTACT, FOOTER_LOGO_URL } from "@/lib/config";
 
 export default function Footer() {
   return (
@@ -41,8 +10,13 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <div className="footer-logo">CFI</div>
-            <div className="footer-tagline">IDEATION</div>
+            <Image
+              src={FOOTER_LOGO_URL}
+              alt="CFI Ideation"
+              width={112}
+              height={63}
+              className="footer-logo-image"
+            />
           </div>
 
           <div className="footer-column">
@@ -82,21 +56,6 @@ export default function Footer() {
               <div className="footer-contact-item">
                 <span className="footer-contact-label">EMAIL</span>
                 <span className="footer-contact-value">{CONTACT.email}</span>
-              </div>
-              <div className="footer-contact-item">
-                <span className="footer-contact-label">SOCIAL</span>
-                <div className="footer-social">
-                  {SOCIAL_LINKS.map((social) => (
-                    <Link
-                      key={social.name}
-                      href={social.href}
-                      className="footer-social-link"
-                      aria-label={social.name}
-                    >
-                      <SocialLogo name={social.name} />
-                    </Link>
-                  ))}
-                </div>
               </div>
             </div>
           </div>

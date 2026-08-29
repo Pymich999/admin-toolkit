@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import "@/app/globals.css";
 import "@/styles/admin-toolkit.css";
 import { LenisProvider } from "@/components/LenisProvider";
+import { BRAND_LOGO_URL } from "@/lib/config";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -30,6 +31,11 @@ export const metadata: Metadata = {
     "productivity",
   ],
   authors: [{ name: "CFI Ideation" }],
+  icons: {
+    icon: BRAND_LOGO_URL,
+    shortcut: BRAND_LOGO_URL,
+    apple: BRAND_LOGO_URL,
+  },
   openGraph: {
     title: "Administrative Toolkit Training | CFI Ideation",
     description:
@@ -42,7 +48,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body>
+      <body suppressHydrationWarning>
         <LenisProvider>{children}</LenisProvider>
       </body>
     </html>
