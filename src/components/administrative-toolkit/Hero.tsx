@@ -1,12 +1,73 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useMemo, useState } from "react";
 import type { CSSProperties } from "react";
 import { BRAND_LOGO_URL, REGISTRATION_URL } from "@/lib/config";
 import { courses } from "@/data/courses";
 
 export default function Hero() {
+  const shouldReduceMotion = useReducedMotion();
+  const phrases = useMemo(
+    () => [
+      "Welcome to the beginning of your administrative toolkit journey",
+      "Build confidence with the tools modern teams use every day",
+      "Learn practical systems for smoother administrative work",
+    ],
+    [],
+  );
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [visibleLength, setVisibleLength] = useState(phrases[0].length);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [hasStartedWriting, setHasStartedWriting] = useState(false);
+  const activePhrase = phrases[phraseIndex];
+  const visiblePhrase = activePhrase.slice(0, visibleLength);
+
+  useEffect(() => {
+    if (shouldReduceMotion) {
+      return;
+    }
+
+    if (!hasStartedWriting) {
+      const startTimeout = window.setTimeout(() => {
+        setVisibleLength(0);
+        setIsDeleting(false);
+        setHasStartedWriting(true);
+      }, 900);
+
+      return () => window.clearTimeout(startTimeout);
+    }
+
+    const atFullPhrase = visibleLength === activePhrase.length;
+    const atEmptyPhrase = visibleLength === 0;
+    const delay = atFullPhrase && !isDeleting ? 1700 : isDeleting ? 40 : 64;
+
+    const timeout = window.setTimeout(() => {
+      if (atFullPhrase && !isDeleting) {
+        setIsDeleting(true);
+        return;
+      }
+
+      if (atEmptyPhrase && isDeleting) {
+        setPhraseIndex((current) => (current + 1) % phrases.length);
+        setIsDeleting(false);
+        return;
+      }
+
+      setVisibleLength((current) => current + (isDeleting ? -1 : 1));
+    }, delay);
+
+    return () => window.clearTimeout(timeout);
+  }, [
+    activePhrase.length,
+    hasStartedWriting,
+    isDeleting,
+    phrases,
+    shouldReduceMotion,
+    visibleLength,
+  ]);
+
   return (
     <section className="hero-section">
       <div className="hero-container">
@@ -22,9 +83,7 @@ export default function Hero() {
         </div>
 
         <h1 className="hero-heading">
-          <span className="hero-heading-text">
-            Welcome to the beginning of your administrative journey
-          </span>
+          <span className="hero-heading-text">{visiblePhrase}</span>
         </h1>
 
         <p className="hero-description">
