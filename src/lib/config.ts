@@ -1,5 +1,5 @@
 export const REGISTRATION_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSc4F67D4cjYydBv4pCzwoRuNcqeo9ID9ZBC03eSC-jEfPUsUQ/viewform?usp=header";
+  "https://docs.google.com/forms/d/e/1FAIpQLSehXLAW8DR7wVWt3q6WNGGjhNEirU2bZXQFjpHZ_gJylAuf-w/viewform?usp=dialog";
 
 export const BRAND_LOGO_URL = "/images/courses/CFi%20Logo%20Black.png";
 export const FOOTER_LOGO_URL = "/images/courses/CFi%20Logo%20White%20(1).png";

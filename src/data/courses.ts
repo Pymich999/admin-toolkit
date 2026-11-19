@@ -74,7 +74,7 @@ export const courses: Course[] = [
     id: "cline",
     title: "Prompt Engineering",
     description: "Use AI assistance to plan tasks, edit files, and speed up workflows.",
-    image: "/images/courses/cline.png",
-    color: "#170626",
+    image: "/images/courses/preview.webp",
+    color: "#0b1736",
   },
 ];

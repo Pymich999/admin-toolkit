@@ -41,7 +41,7 @@ export default function Benefits() {
             }}
             whileHover={{
               y: -6,
-              boxShadow: "0 30px 50px rgba(75, 22, 140, 0.18)",
+              boxShadow: "0 30px 50px rgba(30, 64, 175, 0.18)",
             }}
           >
             <span className="benefit-card-number">{index + 1}</span>

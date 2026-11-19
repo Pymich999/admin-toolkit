@@ -19,7 +19,7 @@ export default function CourseCard({ course }: CourseCardProps) {
       transition={{ duration: 0.48, ease: EASE_STANDARD }}
       whileHover={{
         y: -4,
-        boxShadow: "0 20px 40px rgba(75, 22, 140, 0.16)",
+        boxShadow: "0 20px 40px rgba(30, 64, 175, 0.16)",
       }}
     >
       <div className="course-card-image-wrapper">

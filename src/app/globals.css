@@ -1,17 +1,17 @@
 :root {
-  --color-blue: #4b168c;
-  --color-blue-dark: #170626;
-  --color-blue-glow: rgba(75, 22, 140, 0.42);
-  --color-white: #f7f2fa;
-  --color-dark: #170626;
-  --color-soft-bg: #f1e8f7;
-  --color-gray-100: #fbf8fd;
-  --color-gray-200: #dbcbe8;
-  --color-gray-300: #b99bd3;
-  --color-gray-600: #765b8d;
-  --color-gray-800: #2d123f;
-  --color-purple-mid: #6b2aa5;
-  --color-lavender: #b99bd3;
+  --color-blue: #1e40af;
+  --color-blue-dark: #0b1736;
+  --color-blue-glow: rgba(30, 64, 175, 0.42);
+  --color-white: #f6f8fc;
+  --color-dark: #0b1736;
+  --color-soft-bg: #e7eefb;
+  --color-gray-100: #f9fbfe;
+  --color-gray-200: #c9d8f0;
+  --color-gray-300: #9ab4dd;
+  --color-gray-600: #51688e;
+  --color-gray-800: #10203d;
+  --color-blue-mid: #2f5bd0;
+  --color-blue-light: #9ab4dd;
 
   --font-display: "Playfair Display", Georgia, serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
